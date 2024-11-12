@@ -101,7 +101,8 @@ Products
 
 7.  Get All Orders
     -   Endpoint: GET /orders
-    -   Description: Retrieve a list of all orders. 3. Get Order by ID
+    -   Description: Retrieve a list of all orders.
+8.  Get Order by ID
     -   Endpoint: GET /orders/:id
     -   Description: Retrieve a single order by its ID.
     -   Parameters:

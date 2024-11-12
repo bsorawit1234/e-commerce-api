@@ -3,6 +3,7 @@ package database
 import (
 	"log"
 
+	"github.com/bsorawit1234/e-commerce-api/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -16,4 +17,9 @@ func ConnectDatabase() {
 	}
 
 	DB = database
+
+	err = DB.AutoMigrate(&models.Product{}, &models.Order{}, &models.OrderItem{})
+	if err != nil {
+		log.Fatal("Failed to migrate database:", err)
+	}
 }
